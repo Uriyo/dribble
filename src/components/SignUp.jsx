@@ -50,24 +50,29 @@ const SignUp = () => {
   };
   
   return (
-    <div className="flex flex-row">
-      <div>
+    <div className="flex flex-col md:flex-row bg-no-repeat bg-cover glass-container md:bg-white ">
+      <div className='flex backdrop-filter backdrop-blur-lg w-screen'>
+      <div className="hidden md:block w-full md:w-1/2">
         <img
           src={SignUpImg}
           alt="signUp img"
           className="flex justify-start max-w-screen-2xl h-screen"
         />
       </div>
-      <div className="p-6 mt-16 rounded-lg  max-w-md mx-auto">
+      <div className="p-6 mt-16 sm:mt-10 rounded-lg  max-w-md mx-auto">
+        
+        <form onSubmit={handleSubmit} className='p-4 bg-white rounded-lg'>
         <h1 className="text-black font-bold text-2xl">Sign up to Dribbble</h1>
-
-        <form onSubmit={handleSubmit}>
+        <span className="text-gray-500 text-sm ">Already a member?{" "}<a href="/signin" className="text-blue-800 font-semibold">
+          Sign In
+        </a>
+      </span>          
         {Object.values(formErrors).map((error, index) => (
             <p key={index} className="text-red-500 mt-4">{"•"} {error}</p>
           ))}
-          <div className="flex flex-row pt-10">
+          <div className="flex flex-col md:flex-row pt-10">
             <div className="flex flex-col mx-1">
-              <label className="text-black  font-bold " htmlFor="name">
+              <label className="text-black  font-bold mb-2 md:mb-0 " htmlFor="name">
                 Name
               </label>
               <input
@@ -81,8 +86,8 @@ const SignUp = () => {
               />
               
             </div>
-            <div className="flex flex-col mx-1">
-              <label className="text-black  font-bold" htmlFor="username">
+            <div className="flex flex-col mx-1 my-8 md:my-0">
+              <label className="text-black  font-bold mb-2 md:mb-0" htmlFor="username">
                 Username
               </label>
               <input
@@ -97,12 +102,12 @@ const SignUp = () => {
               
             </div>
           </div>
-          <div className="flex flex-col mx-1 pt-9">
-            <label className="text-black font-bold" htmlFor="email">
+          <div className="flex flex-col mx-1 pt-2 md:pt-9">
+            <label className="text-black font-bold mb-2 md:mb-0" htmlFor="email">
               Email
             </label>
             <input
-              className={` rounded-lg p-2 w-full ${!formErrors.email ? (" bg-gray-100"):(" bg-red-100")} `}
+              className={` rounded-lg p-2 w-full   ${!formErrors.email ? (" bg-gray-100"):(" bg-red-100")} `}
               id="email"
               type="email"
               placeholder="john@example.com"
@@ -117,7 +122,7 @@ const SignUp = () => {
               Password
             </label>
             <input
-              className={`rounded-lg p-2 w-full ${!formErrors.password ? (" bg-gray-100"):(" bg-red-100")} `}
+              className={`rounded-lg p-2 w-full  ${!formErrors.password ? (" bg-gray-100"):(" bg-red-100")} `}
               id="password"
               type="password"
               placeholder="Enter your password"
@@ -135,7 +140,7 @@ const SignUp = () => {
               checked={formData.termsChecked}
               onChange={handleChange}
             />
-            <label className="text-gray-500 ml-2 mt-2" htmlFor="terms">
+            <label className="text-gray-500 ml-2 mt-2 text-sm md:text-base" htmlFor="terms">
               Creating an account means you’re okay{" "}
               <span className="text-blue-800 font-semibold">
                 with our Terms of Service, Privacy Policy,
@@ -164,13 +169,9 @@ const SignUp = () => {
           </span>{" "}
           apply.
         </p>
+      
+        </div>
       </div>
-      <span className="text-gray-500 py-6 pr-6">
-        Already a member?{" "}
-        <a href="/signin" className="text-blue-800 font-semibold">
-          Sign In
-        </a>
-      </span>
     </div>
   );
 }

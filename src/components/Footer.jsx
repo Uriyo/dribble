@@ -5,7 +5,7 @@ import { faBasketball } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="bg-slate-100 text-black">
+    <div className="bg-slate-100 text-black p-2">
             <div className="container mx-auto py-8">
               <div className="flex flex-wrap justify-between">
                 <div className="w-full md:w-1/6">
@@ -17,25 +17,25 @@ const Footer = () => {
                   </p>
                   
                   <ul className="flex flex-row px-0">
-                    <li className="p-2">
-                      <FontAwesomeIcon icon={faInstagram} className="text-xl" />
+                    <li className="p-2 md:p-1">
+                      <FontAwesomeIcon icon={faInstagram} className="text-2xl md:text-xl" />
                     </li>
-                    <li className="p-2">
-                      <FontAwesomeIcon icon={faMeta} className="text-xl" />
+                    <li className="p-2 md:p-1">
+                      <FontAwesomeIcon icon={faMeta} className="text-2xl md:text-xl" />
                     </li>
-                    <li className="p-2">
-                      <FontAwesomeIcon icon={faPinterest} className="text-xl" />
+                    <li className="p-2 md:p-1">
+                      <FontAwesomeIcon icon={faPinterest} className="text-2xl md:text-xl" />
                     </li>
-                    <li className="p-2">
+                    <li className="p-2 md:p-1">
                       <FontAwesomeIcon
                         icon={faSquareXTwitter}
-                        className="text-xl"
+                        className="text-2xl md:text-xl"
                       />
                     </li>
-                    <li className="p-2">
+                    <li className="p-2 md:p-1">
                       <FontAwesomeIcon
                         icon={faBasketball}
-                        className="text-xl"
+                        className="text-2xl md:text-xl"
                       />
                     </li>
                   </ul>

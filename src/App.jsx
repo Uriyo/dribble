@@ -4,6 +4,7 @@ import EmailVerification from "./components/EmailVerification"
 import Profile from "./components/Profile"
 import SignUp from "./components/SignUp"
 
+
 function App() {
   return (
     <Router basename="/">
