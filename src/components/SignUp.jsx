@@ -50,8 +50,8 @@ const SignUp = () => {
   };
   
   return (
-    <div className="flex flex-col md:flex-row bg-no-repeat bg-cover glass-container md:bg-white ">
-      <div className='flex backdrop-filter backdrop-blur-lg w-screen'>
+    <div className="flex flex-col md:flex-row bg-no-repeat bg-cover glass-container md:bg-white h-screen">
+      <div className='flex backdrop-filter backdrop-blur-lg w-screen h-screen'>
       <div className="hidden md:block w-full md:w-1/2">
         <img
           src={SignUpImg}
@@ -160,7 +160,7 @@ const SignUp = () => {
           {/* Display form errors */}
           
         </form>
-        <p className="text-gray-500 text-xs mt-4">
+        <p className="text-gray-500 sm:text-gray-700 md:text-gray-500 text-xs mt-4">
           This site is protected by reCAPTCHA and the Google{" "}
           <span className="text-blue-800 font-semibold">Privacy Policy </span>{" "}
           <span className="text-blue-800 font-semibold">
